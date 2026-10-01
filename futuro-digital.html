@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Futuro Digital - ONG Ação Solidária</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Institucional -->
+  <header>
+    <h1>ONG Ação Solidária</h1>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="projetos.html" class="active">Projetos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="prato-cheio.html">Prato Cheio</a></li>
+            <li><a href="futuro-digital.html">Futuro Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section style="grid-column: span 12;">
+      <span class="badge badge--secondary">Inclusão Digital & Tech</span>
+      <h2>Projeto Futuro Digital</h2>
+      <img src="img/futuro-digital.png" alt="Estudantes em sala de aula participando de curso de informática" style="width: 100%; max-width: 800px; height: auto; border-radius: var(--radius-md);">
+      
+      <p>O <strong>Projeto Futuro Digital</strong> promove a inclusão digital e a capacitação técnica para jovens e adultos ingressarem no mercado de trabalho.</p>
+      
+      <h3>Como Funciona</h3>
+      <p>Oferecemos cursos gratuitos de informática básica, navegação segura, ferramentas de escritório e introdução à programação em nossos laboratórios comunitários.</p>
+      
+      <h3>Como Você Pode Ajudar</h3>
+      <p>Você pode atuar como instrutor, monitor de turmas, mentor profissional ou doando equipamentos eletrônicos para o nosso laboratório.</p>
+
+      <div style="margin-top: var(--space-6); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+        <a href="cadastro.html" class="btn">Quero Voluntariar neste Projeto</a>
+        <a href="projetos.html" class="btn btn--secondary">Ver Outros Projetos</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto acadêmico - Página da ONG Ação Solidária © 2026.</p>
+  </footer>
+
+</body>
+</html>

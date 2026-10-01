@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos - ONG Ação Solidária</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Institucional -->
+  <header>
+    <h1>ONG Ação Solidária</h1>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="projetos.html" class="active">Projetos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="prato-cheio.html">Prato Cheio</a></li>
+            <li><a href="futuro-digital.html">Futuro Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <div class="initiatives-hero">
+      <h2>Nossas Iniciativas</h2>
+      <p class="initiatives-hero__subtitle">Conheça nossos projetos que transformam a comunidade diariamente.</p>
+    </div>
+
+    <section style="grid-column: span 12;">
+      <h2>Projetos em Andamento</h2>
+      
+      <!-- Card do Projeto 1 -->
+      <article>
+        <img src="img/prato-cheio.png" alt="Voluntários preparando e distribuindo refeições para a comunidade" class="article__image">
+        <div class="article__content">
+          <span class="badge badge--primary">Alimentação</span>
+          <h3>Prato Cheio</h3>
+          <p>Projeto focado no combate à fome, realizando a arrecadação e entrega de refeições e cestas básicas para famílias em situação de vulnerabilidade.</p>
+          <a href="prato-cheio.html" class="btn" style="margin-top: var(--space-4);">Saiba Mais sobre o Projeto</a>
+        </div>
+      </article>
+
+      <!-- Card do Projeto 2 -->
+      <article>
+        <img src="img/futuro-digital.png" alt="Estudantes em sala de aula participando de curso de informática" class="article__image">
+        <div class="article__content">
+          <span class="badge badge--secondary">Educação & Tech</span>
+          <h3>Futuro Digital</h3>
+          <p>Oferece oficinas e capacitação técnica em tecnologia para jovens e adultos, preparando-os para o mercado de trabalho moderno.</p>
+          <a href="futuro-digital.html" class="btn" style="margin-top: var(--space-4);">Saiba Mais sobre o Projeto</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto acadêmico - Página da ONG Ação Solidária © 2026.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Voluntário - ONG Ação Solidária</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilo auxiliar para alinhar o checkbox com a label */
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho Institucional -->
+  <header>
+    <h1>ONG Ação Solidária</h1>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="projetos.html">Projetos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="prato-cheio.html">Prato Cheio</a></li>
+            <li><a href="futuro-digital.html">Futuro Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html" class="active">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="form-container" style="grid-column: span 12;">
+      <h2>Faça parte da nossa causa</h2>
+      <p>Preencha o formulário abaixo para se registrar como voluntário. Os campos com * são obrigatórios.</p>
+
+      <!-- Alerta Contextual de Feedback -->
+      <div class="alert alert--success" role="alert" style="display: none;" id="feedback-alert">
+        Seu cadastro foi enviado com sucesso! Entraremos em contato em breve.
+      </div>
+
+      <!-- Formulário com exibição direta do alerta no envio -->
+      <form action="#" method="POST" id="form-cadastro" onsubmit="event.preventDefault(); document.getElementById('feedback-alert').style.display = 'block';">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <div class="form-group">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required minlength="3">
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp *</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Área de Interesse</legend>
+
+          <div class="form-group">
+            <label for="projeto">Escolha o Projeto de Preferência *</label>
+            <select id="projeto" name="projeto" required>
+              <option value="" disabled selected>Selecione um projeto...</option>
+              <option value="prato-cheio">Prato Cheio (Distribuição de Alimentos)</option>
+              <option value="futuro-digital">Futuro Digital (Aulas de Informática)</option>
+              <option value="apoio-geral">Apoio Geral / Eventos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Por que você quer ser voluntário? *</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos um pouco sobre suas motivações e experiências..." required></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Aceite de Termos -->
+        <div class="form-group checkbox-group">
+          <label for="termos" class="checkbox-label">
+            <input type="checkbox" id="termos" name="termos" required> 
+            <span>
+              Li e concordo com os 
+              <button type="button" class="btn-link" onclick="document.getElementById('modal-termos').classList.add('is-active')">
+                Termos de Voluntariado
+              </button> *
+            </span>
+          </label>
+        </div>
+
+        <div class="form-actions" style="display: flex; gap: var(--space-4);">
+          <button type="submit" class="btn">Enviar Cadastro</button>
+          <button type="reset" class="btn btn--secondary" onclick="document.getElementById('feedback-alert').style.display = 'none';">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal Informativo -->
+  <div class="modal-backdrop" id="modal-termos" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-labelledby="modal-titulo">
+      <h3 id="modal-titulo">Termos de Voluntariado</h3>
+      <p>Ao se cadastrar na ONG Ação Solidária, você concorda em contribuir voluntariamente com nossas atividades comunitárias, respeitando as diretrizes de convivência, pontualidade e dedicação pré-acordadas.</p>
+      <p>Seus dados pessoais serão utilizados exclusivamente para comunicação interna e organização dos projetos sociais da ONG.</p>
+      <button type="button" class="btn" style="margin-top: var(--space-4);" onclick="document.getElementById('modal-termos').classList.remove('is-active')">
+        Compreendi e Concordo
+      </button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 ONG Ação Solidária. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

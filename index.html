@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Ação Solidária</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Institucional -->
+  <header>
+    <h1>ONG Ação Solidária</h1>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+    <nav>
+      <ul>
+        <li><a href="#/" class="nav-link">Início</a></li>
+        <li class="dropdown">
+          <a href="#/projetos" class="nav-link">Projetos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#/prato-cheio" class="nav-link">Prato Cheio</a></li>
+            <li><a href="#/futuro-digital" class="nav-link">Futuro Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="#/cadastro" class="nav-link">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal SPA Dinâmico -->
+  <main id="app"></main>
+
+  <!-- Modal Informativo de Termos -->
+  <div class="modal-backdrop" id="modal-termos" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-labelledby="modal-titulo">
+      <h3 id="modal-titulo">Termos de Voluntariado</h3>
+      <p>Ao se cadastrar na ONG Ação Solidária, você concorda em contribuir voluntariamente com nossas atividades comunitárias, respeitando as diretrizes de convivência, pontualidade e dedicação pré-acordadas.</p>
+      <p>Seus dados pessoais serão utilizados exclusivamente para comunicação interna e organização dos projetos sociais da ONG.</p>
+      <button type="button" class="btn" style="margin-top: var(--space-4);" id="btn-fechar-modal">
+        Compreendi e Concordo
+      </button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto acadêmico - Página da ONG Ação Solidária © 2026.</p>
+  </footer>
+
+  <!-- Módulo JS Principal -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
